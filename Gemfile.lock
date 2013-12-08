@@ -16,7 +16,8 @@ GEM
     tilt (1.3)
 
 PLATFORMS
-  ruby (2.0.0)
+  ruby
+  unknown
 
 DEPENDENCIES
   json
