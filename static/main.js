@@ -1,11 +1,20 @@
-// playlists by year
+// albums by year
 var years = {};
 
-// add playlists
-function addplaylists(data) {
+// add albums by year
+function addAlbums(data) {
   // process the data into years
   for (var i=0; i<data.length; i++) {
-    var playlist = data[i];
+    var album = data[i];
+    var displayDate = album['displayDate'];
+    if (displayDate) {
+      var year = parseInt(displayDate.substr(displayDate.length-4));
+      if (years[year]) {
+        years[year].push(album);
+      } else {
+        years[year] = [album];
+      }
+    }
   }
 }
 
@@ -19,17 +28,17 @@ function load() {
   // find the user
   $.getJSON('/user/'+encodeURIComponent(username), function(u) {
     var user = u['key'];
-    var playlistCount = 0;
-    function loadNextplaylists(page) {
-      $.getJSON('/playlists/'+encodeURIComponent(user)+'/'+page, function(a) {
+    var albumCount = 0;
+    function loadNextAlbums(page) {
+      $.getJSON('/albums/'+encodeURIComponent(user)+'/'+page, function(a) {
         if (a.length > 0) {
-          // loaded some playlists
-          addplaylists(a);
+          // loaded some albums
+          addAlbums(a);
           // update the ui
-          playlistCount += a.length
-          $('#loading').text('Loaded '+playlistCount+' playlists...');
+          albumCount += a.length
+          $('#loading').text('Loaded '+albumCount+' albums...');
           // go look for some more
-          loadNextplaylists(page+1);
+          loadNextAlbums(page+1);
         } else {
           // looks like there's nothing left to load
           $('#loading').slideUp();
@@ -42,7 +51,7 @@ function load() {
       })
     }
 
-    loadNextplaylists(0);
+    loadNextAlbums(0);
   })
 }
 
@@ -101,10 +110,10 @@ function buildGraph() {
     column.append($('<div>').addClass('year').text(year));
     if (years[year]) {
       for (var i=0; i<years[year].length; i++) {
-        var playlist = years[year][i];
-        var art = $('<img>').addClass('playlist').attr('src', playlist['icon']);
-        art.attr('title', playlist['name'] + ' / ' + playlist['artist']);
-        art.attr('id', playlist['key']);
+        var album = years[year][i];
+        var art = $('<img>').addClass('album').attr('src', album['icon']);
+        art.attr('title', album['name'] + ' / ' + album['artist']);
+        art.attr('id', album['key']);
         art.click(function() {
           $('#player').show();
           $('#instructions').hide();
