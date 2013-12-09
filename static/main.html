@@ -4,26 +4,17 @@
   <title>Rdio Collection Chronology</title>
   <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-  <script src="main.js" type="text/javascript"></script>
+  <script src="jams.js" type="text/javascript"></script>
   <link rel="stylesheet" href="cc.css" type="text/css">
   <link rel="icon shortcut" type="image/x-icon" href="http://www.rdio.com/favicon.ico" />
 </head>
 <body>
-  <div id="title">
-    <h1><span class="logo">Rdio</span> collection chronology<span class="userinfo"> for <a href="" class="userlink" target="_blank"></a><span class="reset"></span></span></h1>
-  </div>
-  
-  <div id="dialog">
-    <label>Enter your Rdio Username <input id="username"><button id="go">Go</button></label>
-  </div>
-  
+
+
   <div id="loading">
     Loading...
   </div>
 
-  <div id="instructions">
-    Scroll to see more. Click an album to listen.
-  </div>
   
   <div id="player">
     <img id="art">
@@ -40,12 +31,8 @@
     </div>
   </div>
 
-  <div id="graph">
+  <div id="wrapper">
   </div>
-
-  <div id="poweredby"><a href="http://www.rdio.com/">Powered by Rdio</a></div>
-  
-  <div id="footer">© 2011 Rdio, Inc. You can build cool stuff too using the <a href="http://developer.rdio.com/">Rdio API</a>.</div>
 
   <div id="api_swf"></div>
 </body>
