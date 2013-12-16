@@ -1,38 +1,38 @@
 $( document ).ready(function() {
 
-function addAlbums(data) {
+function addPlaylists(data) {
   // process the data into years
   for (var i=0; i<data.length; i++) {
-    var album = data[i];
+    var playlist = data[i];
   }
 }
 function buildPlaylists(data) {
   for (var i=0; i<data.length; i++) {
     var playlistRow = $('<div>').addClass('playlist-row');
-    var album = data[i];
-    var art = $('<img>').addClass('album-art').attr('src', album['icon']);
+    var playlist = data[i];
+    var art = $('<img>').addClass('album-art').attr('src', playlist['icon']);
     playlistRow.append(art);
     playlistRow.appendTo($('#wrapper'));
   }
 };
 
-function loadNextAlbums(page) {
-      var albumCount = 0;
-      $.getJSON('/albums/s15438980/'+page, function(a) {
+function loadPlaylists(page) {
+      var playlistCount = 0;
+      $.getJSON('/playlists/s15438980/'+page, function(a) {
         if (a.length > 0) {
           // loaded some albums
-          addAlbums(a);
+          addPlaylists(a);
           // update the ui
-          albumCount += a.length
-          $('#loading').text('Loaded '+albumCount+' albums...');
+          playlistCount += a.length
+          $('#loading').text('Loading '+playlistCount+' Jams');
           // go look for some more
-          loadNextAlbums(page+1);
+          loadPlaylists(page+1);
           // looks like there's nothing left to load
           buildPlaylists(a);
         }
       })
     }
 
-loadNextAlbums(0);
+loadPlaylists(0);
 
 });
