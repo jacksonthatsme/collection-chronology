@@ -52,8 +52,8 @@ function buildPlaylists(data) {
       }
     }
     console.log(playlist.tracks.length);
-    $.each(playlist.tracks[i], function(a){
-      addTracks(a)
+    $.each(playlist.tracks, function(a, b){
+      addTracks(b)
     })
   
     // Add table to li.playlist
