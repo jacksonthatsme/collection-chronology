@@ -25,10 +25,10 @@ function buildPlaylists(data) {
     // Define table
     var table = $('<table>').addClass('list');
     // Add tracks function
-    function addTracks(trackData){
-      for (var i=0; i<trackData.length; i++){
+    function addTracks(tracks){
+      console.log(tracks.length);
         // Define track as data
-        var track = trackData[i];
+        var track = playlist.tracks[i];
         // Define table row
         var tr = $('<tr>').addClass('track-listing');
         // define td.count
@@ -38,7 +38,7 @@ function buildPlaylists(data) {
         // define td.duration
         var trackDuration = $('<td>').addClass('duration');
         // define listing
-        var listing = '<em>' + playlist.tracks.name + '</em>' + '&#151;' + track.artist;
+        var listing = '<em>' + track.name + '</em>' + ' &#151; ' + track.artist;
         //define duration
         var duration = timeFromSecs(track.duration);
         // add td.count to tr
@@ -49,23 +49,35 @@ function buildPlaylists(data) {
         tr.append(trackListing);
         tr.append(trackDuration);
         tr.appendTo(table);
-      }
     }
-    console.log(playlist.tracks.length);
-    $.each(playlist.tracks, function(a, b){
-      addTracks(b)
-    })
-  
+    $.each(playlist.tracks, function(b, a){
+      addTracks(a)
+    });
     // Add table to li.playlist
     playlistLi.append(table);
+    // define clearfix
+    var clear = $('<div>').addClass('clear');
+    // Add clearfix
+    playlistLi.append(clear);
     // Add li.playlist to ul.playlist
     playlistLi.appendTo($('ul.playlists'));
   }
 };
-
+function buildIndex(data){
+  for (var i=0; i<data.length; i++) {
+    var playlist = data[i];
+    //define index li
+    var indexLi = $('<li>');
+    var linkDown = $('<a>').attr('href', '#' + playlist.name.replace(/\s/g, ''));
+    var listName = playlist.name;
+    linkDown.append(listName);
+    indexLi.append(linkDown);
+    indexLi.appendTo($('.index-list ul'));
+  }
+}
 function loadPlaylists(page) {
       var playlistCount = 0;
-      $.getJSON('/playlists/s15438980/'+page, function(a) {
+      $.getJSON('/playlists/s5315988/'+page, function(a) {
         if (a.length > 0) {
           // loaded some albums
           addPlaylists(a);
@@ -76,6 +88,7 @@ function loadPlaylists(page) {
           loadPlaylists(page+1);
           // looks like there's nothing left to load
           buildPlaylists(a);
+          buildIndex(a);
         }
       })
     }

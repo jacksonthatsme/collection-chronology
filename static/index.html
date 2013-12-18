@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
   <script src="jams-test.js" type="text/javascript"></script>
 </head>
 <body>
-  <ul class="playlists">
-    
-  </ul>
+  <!-- Section About -->
+  <section class="about">
+    <div class="container">
+      <p>Jams is a project by graphic designers Anne Lee & Jackson Lynch in an effort to reconcile their musical differences.</p>
+    </div>
+  </section>
+  <!-- Nav -->
+        <nav>
+          <div class="container">
+            <div class="about-link"><h3>About</h3></div>
+            <div class="close-link"><h3>close</h3></div>
+          </div>
+        </nav><!-- /Nav -->
+  <!-- Section Head -->
+  <section class="head">
+      <!-- Container -->
+      <div class="container">
+        <!-- Titling -->
+        <div class="title">
+          <div class="logotype">
+            <img src="images/jams-logotype.png" alt="" />
+          </div>
+          <h2 class="tagline">a very tasty music collection</h2>
+        </div><!-- /Titling -->
+        <!-- Container -->
+        <div class="container">
+          <!-- Index List -->
+          <div class="index-list">
+            <h3>Playlists</h3>
+            <ul>
+            </ul>
+          </div><!-- /Index List -->
+        </div><!-- /Container -->
+      </div><!-- /Container -->
+  </section><!-- /Section Head -->
+  <div class="pagedown">
+    <div class="button-container">
+      <a href="">
+        <div class="button">
+          <div class="icon">d</div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- Music Player -->
+  <div class="music-player">
+    <!-- Container -->
+    <div class="container">
+      <div class="playerbar"> 
+        Select a playlist to listen to a track
+      </div>
+        <ul class="control-panel">
+          <li><span class="icon prev">b</span></li>
+          <li><span class="icon play">p</span></li>
+          <li><span class="icon next">n</span></li>
+        </ul>
+    </div><!-- /Container -->
+  </div><!-- /Music Player -->
+  <!-- Section Content -->
+  <section class="content">
+    <!-- Playlist List -->
+    <ul class="playlists">
+    </ul><!-- /Playlist List -->
+  </section><!-- /Section Content -->
 </body>
 </html>

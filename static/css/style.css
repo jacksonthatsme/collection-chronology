@@ -1,0 +1,525 @@
+@font-face {
+  font-family: 'brandon_grotesque';
+  src: url("../fonts/brandon_thin-webfont.eot");
+  src: url("../fonts/brandon_thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_thin-webfont.woff") format("woff"), url("../fonts/brandon_thin-webfont.ttf") format("truetype"), url("../fonts/brandon_thin-webfont.svg#brandon_grotesquethin") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'brandon_grotesque';
+  src: url("../fonts/brandon_reg-webfont.eot");
+  src: url("../fonts/brandon_reg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_reg-webfont.woff") format("woff"), url("../fonts/brandon_reg-webfont.ttf") format("truetype"), url("../fonts/brandon_reg-webfont.svg#brandon_grotesque_regularRg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'brandon_grotesque';
+  src: url("../fonts/brandon_med-webfont.eot");
+  src: url("../fonts/brandon_med-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_med-webfont.woff") format("woff"), url("../fonts/brandon_med-webfont.ttf") format("truetype"), url("../fonts/brandon_med-webfont.svg#brandon_grotesquemedium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'brandon_grotesque';
+  src: url("../fonts/brandon_light-webfont.eot");
+  src: url("../fonts/brandon_light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_light-webfont.woff") format("woff"), url("../fonts/brandon_light-webfont.ttf") format("truetype"), url("../fonts/brandon_light-webfont.svg#brandon_grotesquelight") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'brandon_grotesque';
+  src: url("../fonts/brandon_bld-webfont.eot");
+  src: url("../fonts/brandon_bld-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_bld-webfont.woff") format("woff"), url("../fonts/brandon_bld-webfont.ttf") format("truetype"), url("../fonts/brandon_bld-webfont.svg#brandon_grotesquebold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'brandon_grotesque';
+  src: url("../fonts/brandon_blk-webfont.eot");
+  src: url("../fonts/brandon_blk-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/brandon_blk-webfont.woff") format("woff"), url("../fonts/brandon_blk-webfont.ttf") format("truetype"), url("../fonts/brandon_blk-webfont.svg#brandon_grotesqueblack") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jamcons';
+  src: url("../fonts/jamcons.eot");
+  src: url("../fonts/jamcons.eot?#iefix") format("embedded-opentype"), url("../fonts/jamcons.ttf") format("truetype"), url("../fonts/jamcons.woff") format("woff"), url("../fonts/jamcons.svg#jamcons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 78, sass/_fonts.scss */
+[class^="icon-"], [class*=" icon-"], .icon {
+  font-family: 'jamcons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 92, sass/_fonts.scss */
+.icon-twitter:before {
+  content: "\74";
+}
+
+/* line 95, sass/_fonts.scss */
+.icon-facebook:before {
+  content: "\66";
+}
+
+/* line 98, sass/_fonts.scss */
+.icon-arrow_down:before {
+  content: "\64";
+}
+
+/* line 101, sass/_fonts.scss */
+.icon-prev:before {
+  content: "\62";
+}
+
+/* line 104, sass/_fonts.scss */
+.icon-next:before {
+  content: "\6e";
+}
+
+/* line 107, sass/_fonts.scss */
+.icon-play:before {
+  content: "\70";
+}
+
+/* line 110, sass/_fonts.scss */
+.icon-pause:before {
+  content: "\73";
+}
+
+/*RESET*/
+/* line 9, sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 20, sass/_reset.scss */
+li {
+  list-style-type: none;
+}
+
+/* line 23, sass/_reset.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 27, sass/_reset.scss */
+.clear {
+  clear: both;
+  margin: 0px;
+}
+
+/* VARIABLES */
+/* COLORS */
+/*BREAKPOINTS*/
+/* MIXINS */
+/* BASE */
+/* line 17, sass/_base.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 21, sass/_base.scss */
+body {
+  font-size: 16px;
+  font-family: 'brandon_grotesque', helvetica, arial;
+}
+
+/* line 1, sass/_layout.scss */
+section {
+  width: 100%;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 4, sass/_layout.scss */
+section.head {
+  height: calc(100% - 55px);
+  height: -moz-calc(100% - 55px);
+  height: -webkit-calc(100% - 55px);
+  height: -o-calc(100% - 55px);
+  height: -ms-calc(100% - 55px);
+  background-color: #1e0b29;
+  background-image: url("../images/bg_texture.png");
+  color: white;
+  padding-top: 3em;
+}
+/* line 15, sass/_layout.scss */
+section.content {
+  color: #1e0b29;
+}
+/* line 18, sass/_layout.scss */
+section.about {
+  display: none;
+}
+
+/* line 22, sass/_layout.scss */
+.container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px auto;
+  width: 85%;
+  max-width: 1250px;
+}
+@media screen and (max-width: 800px) {
+  /* line 22, sass/_layout.scss */
+  .container {
+    width: 100%;
+    padding: 0px 10%;
+  }
+}
+
+/* line 32, sass/_layout.scss */
+nav {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 3em;
+  color: white;
+}
+/* line 38, sass/_layout.scss */
+nav .container div {
+  float: right;
+  cursor: pointer;
+}
+/* line 42, sass/_layout.scss */
+nav .container div h3:hover {
+  color: #cb1862;
+}
+
+/* line 49, sass/_layout.scss */
+.music-player {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  bottom: 0px;
+  color: #1e0b29;
+  padding: .9em 0px;
+  font-size: 1.1em;
+}
+/* line 60, sass/_layout.scss */
+.music-player .container * {
+  display: inline;
+}
+/* line 63, sass/_layout.scss */
+.music-player .container .playerbar {
+  float: left;
+}
+/* line 66, sass/_layout.scss */
+.music-player .container ul.control-panel {
+  float: right;
+}
+/* line 69, sass/_layout.scss */
+.music-player .container ul.control-panel li .play {
+  font-size: 1.3em;
+  padding: 0px 30px;
+}
+/* line 73, sass/_layout.scss */
+.music-player .container ul.control-panel li .prev, .music-player .container ul.control-panel li .next {
+  font-size: .8em;
+}
+
+/* line 81, sass/_layout.scss */
+ul.playlists li.playlist {
+  padding-bottom: 7em;
+  counter-reset: playlist;
+}
+/* line 84, sass/_layout.scss */
+ul.playlists li.playlist:first-child {
+  margin-top: 9em;
+}
+/* line 87, sass/_layout.scss */
+ul.playlists li.playlist .cover {
+  height: 430px;
+  width: 430px;
+  border: 1px solid #1e0b29;
+  float: left;
+}
+/* line 93, sass/_layout.scss */
+ul.playlists li.playlist table.list {
+  float: right;
+  margin-left: 6em;
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  /* line 100, sass/_layout.scss */
+  div.title {
+    width: 100%;
+    margin-top: 30px;
+  }
+  /* line 104, sass/_layout.scss */
+  div.title img {
+    width: 100%;
+  }
+  /* line 107, sass/_layout.scss */
+  div.title h2.tagline {
+    margin-top: -16%;
+    margin-left: 25%;
+    font-size: 1.6em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* line 116, sass/_layout.scss */
+  div.title h2.tagline {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* line 121, sass/_layout.scss */
+  div.title {
+    margin-top: 50px;
+  }
+  /* line 124, sass/_layout.scss */
+  div.title h2.tagline {
+    font-size: .9em;
+  }
+}
+
+/* line 1, sass/_typography.scss */
+h2 {
+  font-size: 2em;
+}
+
+/* line 4, sass/_typography.scss */
+h3 {
+  font-weight: 500;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* line 12, sass/_typography.scss */
+.index-list ul li {
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+/* line 18, sass/_typography.scss */
+table.list {
+  font-weight: 300;
+  color: #878787;
+}
+/* line 21, sass/_typography.scss */
+table.list td.count:before {
+  font-weight: 900;
+  font-size: .8rem;
+}
+/* line 26, sass/_typography.scss */
+table.list td.listing em {
+  color: #1e0b29;
+  font-weight: 500;
+}
+
+/* line 1, sass/_module.scss */
+.close-link {
+  display: none;
+}
+
+/* line 4, sass/_module.scss */
+.index-list {
+  margin: 10% auto 0px;
+  width: intrinsic;
+}
+/* line 7, sass/_module.scss */
+.index-list ul {
+  margin: 6px 0px 0px;
+  padding: 20px 0px 0px;
+  border-top: 1px solid white;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -webkit-column-gap: 90px;
+  -moz-column-gap: 90px;
+  -o-column-count: 3;
+  -ms-column-count: 3;
+  -o-column-gap: 90px;
+  -ms-column-gap: 90px;
+}
+/* line 21, sass/_module.scss */
+.index-list ul li a:hover {
+  color: #cb1862;
+}
+@media screen and (max-width: 800px) {
+  /* line 28, sass/_module.scss */
+  .index-list ul {
+    -o-column-gap: 40px;
+    -ms-column-gap: 40px;
+    -webkit-column-gap: 40px;
+    -moz-column-gap: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 36, sass/_module.scss */
+  .index-list ul {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -o-column-count: 2;
+    -ms-column-count: 2;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 4, sass/_module.scss */
+  .index-list {
+    display: none;
+  }
+}
+
+/* line 47, sass/_module.scss */
+h2.tagline {
+  position: absolute;
+  margin-top: -120px;
+  margin-left: 210px;
+}
+
+/* line 52, sass/_module.scss */
+.pagedown {
+  position: absolute;
+  bottom: 10px;
+  z-index: 100;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  width: 100%;
+  display: block;
+}
+/* line 60, sass/_module.scss */
+.pagedown .button-container {
+  margin: 0px auto;
+  width: 150px;
+  height: 144px;
+}
+/* line 64, sass/_module.scss */
+.pagedown .button-container .button {
+  width: 150px;
+  height: 144px;
+  background-image: url("../images/droplet.png");
+  background-size: cover;
+}
+/* line 70, sass/_module.scss */
+.pagedown .button-container:hover .icon {
+  display: block;
+  padding-top: 50px;
+}
+/* line 74, sass/_module.scss */
+.pagedown .button-container .icon {
+  display: block;
+  padding-top: 45px;
+}
+@media screen and (max-width: 800px) {
+  /* line 52, sass/_module.scss */
+  .pagedown {
+    bottom: 80px;
+    font-size: 2.3em;
+  }
+  /* line 82, sass/_module.scss */
+  .pagedown .button-container {
+    width: 104px;
+    height: 100px;
+  }
+  /* line 85, sass/_module.scss */
+  .pagedown .button-container .button {
+    width: 104px;
+    height: 100px;
+  }
+  /* line 88, sass/_module.scss */
+  .pagedown .button-container .button:hover .icon {
+    display: block;
+    padding-top: 40px;
+  }
+  /* line 92, sass/_module.scss */
+  .pagedown .button-container .button .icon {
+    display: block;
+    padding-top: 35px;
+  }
+}
+
+/* line 100, sass/_module.scss */
+table.list {
+  border-collapse: collapse;
+  padding: 0px 20px;
+}
+/* line 103, sass/_module.scss */
+table.list tr {
+  counter-increment: playlist;
+  cursor: pointer;
+}
+/* line 107, sass/_module.scss */
+table.list tr:hover {
+  background-color: #e8e6e9;
+}
+/* line 109, sass/_module.scss */
+table.list tr:hover > td.count:before {
+  content: "p";
+  font-family: 'jamcons';
+}
+/* line 114, sass/_module.scss */
+table.list tr:active {
+  background-color: #d2ced4;
+}
+/* line 118, sass/_module.scss */
+table.list td {
+  padding: .8em 0;
+  vertical-align: top;
+}
+/* line 121, sass/_module.scss */
+table.list td.duration {
+  text-align: right;
+  padding-right: 20px;
+}
+/* line 125, sass/_module.scss */
+table.list td.count {
+  width: 40px;
+  padding-left: 20px;
+}
+/* line 128, sass/_module.scss */
+table.list td.count:before {
+  content: counter(playlist,decimal-leading-zero);
+  vertical-align: baseline;
+}
+/* line 133, sass/_module.scss */
+table.list td.listing {
+  text-overflow: ellipsis;
+  padding-right: 20px;
+}
