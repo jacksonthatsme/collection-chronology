@@ -263,19 +263,32 @@ nav .container div h3:hover {
 ul.playlists li.playlist {
   padding-bottom: 7em;
   counter-reset: playlist;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0px auto;
+  width: 85%;
+  max-width: 1250px;
 }
-/* line 84, sass/_layout.scss */
+@media screen and (max-width: 800px) {
+  /* line 81, sass/_layout.scss */
+  ul.playlists li.playlist {
+    width: 100%;
+    padding: 0px 10%;
+  }
+}
+/* line 93, sass/_layout.scss */
 ul.playlists li.playlist:first-child {
   margin-top: 9em;
 }
-/* line 87, sass/_layout.scss */
+/* line 96, sass/_layout.scss */
 ul.playlists li.playlist .cover {
   height: 430px;
   width: 430px;
   border: 1px solid #1e0b29;
   float: left;
 }
-/* line 93, sass/_layout.scss */
+/* line 102, sass/_layout.scss */
 ul.playlists li.playlist table.list {
   float: right;
   margin-left: 6em;
@@ -283,16 +296,16 @@ ul.playlists li.playlist table.list {
 }
 
 @media screen and (max-width: 800px) {
-  /* line 100, sass/_layout.scss */
+  /* line 109, sass/_layout.scss */
   div.title {
     width: 100%;
     margin-top: 30px;
   }
-  /* line 104, sass/_layout.scss */
+  /* line 113, sass/_layout.scss */
   div.title img {
     width: 100%;
   }
-  /* line 107, sass/_layout.scss */
+  /* line 116, sass/_layout.scss */
   div.title h2.tagline {
     margin-top: -16%;
     margin-left: 25%;
@@ -301,18 +314,18 @@ ul.playlists li.playlist table.list {
 }
 
 @media screen and (max-width: 600px) {
-  /* line 116, sass/_layout.scss */
+  /* line 125, sass/_layout.scss */
   div.title h2.tagline {
     font-size: 1.3em;
   }
 }
 
 @media screen and (max-width: 400px) {
-  /* line 121, sass/_layout.scss */
+  /* line 130, sass/_layout.scss */
   div.title {
     margin-top: 50px;
   }
-  /* line 124, sass/_layout.scss */
+  /* line 133, sass/_layout.scss */
   div.title h2.tagline {
     font-size: .9em;
   }

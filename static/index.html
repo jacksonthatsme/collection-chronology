@@ -4,7 +4,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-  <script src="jams-test.js" type="text/javascript"></script>
+  <script src="js/jquery.rdio.min.js" type="text/javascript"></script>
+  <script src="js/jams-test.js" type="text/javascript"></script>
 </head>
 <body>
   <!-- Section About -->
@@ -16,7 +17,7 @@
   <!-- Nav -->
         <nav>
           <div class="container">
-            <div class="about-link"><h3>About</h3></div>
+            <div class="about-link"><h3>About </h3></div>
             <div class="close-link"><h3>close</h3></div>
           </div>
         </nav><!-- /Nav -->
@@ -55,15 +56,18 @@
   <div class="music-player">
     <!-- Container -->
     <div class="container">
-      <div class="playerbar"> 
+      <div class="playerbar-placeholder"> 
         Select a playlist to listen to a track
       </div>
+      <div id="track"></div>
+      <div id="artist"></div>
         <ul class="control-panel">
-          <li><span class="icon prev">b</span></li>
-          <li><span class="icon play">p</span></li>
-          <li><span class="icon next">n</span></li>
+          <li><span class="icon prev" id="previous">b</span></li>
+          <li><span class="icon play" id="play">p</span></li>
+          <li><span class="icon next" id="next">n</span></li>
         </ul>
     </div><!-- /Container -->
+    <div id="api"></div>
   </div><!-- /Music Player -->
   <!-- Section Content -->
   <section class="content">
