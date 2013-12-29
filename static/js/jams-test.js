@@ -1,5 +1,3 @@
-$( document ).ready(function() {
-
 function addPlaylists(data) {
   // process the data into years
   for (var i=0; i<data.length; i++) {
@@ -9,7 +7,7 @@ function addPlaylists(data) {
 function timeFromSecs(seconds)
 {
     return(
-    Math.floor(((seconds/3600)%1)*60)+'.'+
+    Math.floor(((seconds/3600)%1)*60)+':'+
     Math.round(((seconds/60)%1)*60));
 }
 function buildPlaylists(data) {
@@ -25,15 +23,14 @@ function buildPlaylists(data) {
     // Define table
     var table = $('<table>').addClass('list');
     // Add tracks function
-    function addTracks(tracks){
-      for (var i = 0; i< tracks.length; i++){
+    function addTracks(index,tracks){
         // Define track as data
-        var track = playlist.tracks[i];
+        var track = playlist.tracks[index];
         // Define table row
         var tr = $('<tr>').addClass('track-listing');
         // define td.count
         tr.click(function(){
-            $('#api').rdio().play();
+            $('#api').rdio().play(this.key);
         });
         var trackCount = $('<td>').addClass('count');
         // define td.listing
@@ -52,10 +49,9 @@ function buildPlaylists(data) {
         tr.append(trackListing);
         tr.append(trackDuration);
         tr.appendTo(table);
-      }
     }
-    $.each(playlist.tracks, function(i, a){
-      addTracks(a)
+    $.each(playlist.tracks, function(b, a){
+      addTracks(b,a);
     });
     // Add table to li.playlist
     playlistLi.append(table);
@@ -91,14 +87,14 @@ function loadPlaylists(page) {
           // go look for some more
           loadPlaylists(page+1);
           // looks like there's nothing left to load
-          buildPlaylists(a);
           buildIndex(a);
+          buildPlaylists(a);
         }
       })
     }
 
 loadPlaylists(0);
-
+$( document ).ready(function() {
 /* --------- PLAYBACK  --------- */
 $('#api').bind('ready.rdio', function() {
       });
